@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table</title>
+
+</head>
+<body>
+<!-- 
+ - get  : 정보를 주소창에 같이 보냄
+ - post : 안보임
+ 
+ 
+ - 아래 타입들 크롬에서 열어야 정상동작함
+-->
+	<form action="#" method="get">
+		<fieldset>
+			<legend>type 속성</legend>
+			<p>아이디 : <input type="text" name="userId"></p>
+			<p>암호 : <input type="password" name="userPw"></p>
+			<p>검색 : <input type="search"></p>
+			<p>이메일 : <input type="email"></p>
+			<p>전화번호 : <input type="tel"></p>
+			<p>컬러선택 : <input type="color"></p>
+			<p>수량 : <input type="number" min="1" max="10" value="1"></p>
+			<p>만족도 : <input type="range" min="1" max="10" value="1"></p>
+			<p>
+				예<input type="radio" name="recive" checked="checked">
+				아니요<input type="radio" name="recive">
+			</p>
+			<p>
+				html<input type="checkbox" checked="checked">
+				css<input type="checkbox">
+			</p>
+			<p><input type="submit" value="전송"></p>
+			<p><input type="reset" value="취소"></p>
+			<p><input type="image" src="../img/jelly.PNG" alt="전송"></p>
+			<p><input type="file"></p>
+		</fieldset>
+	</form>
+</body>
+</html>

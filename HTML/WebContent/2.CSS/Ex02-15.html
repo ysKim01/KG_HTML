@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>가상요소 선택자</title>
+	
+	<style>
+		p:first-letter{
+			font-size:150%;
+		}
+		p{
+			background : lightgray;
+		}
+		p:first-child{
+			color:blue;
+		}
+		p:nth-child(2){
+			background : beige;
+		}
+		p:last-child{
+			color:red;
+		}
+		p:before{
+			content : "★";
+		}
+		p:after{
+			content : "☆";
+		}
+		.box:before{
+			content: "MENU";
+		}
+		.box:after{
+			content: "선택하세요";
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>COMPANY</p>
+		<p>PRODUCT</p>
+		<p>SERVICE</p>
+		<p>COMMUNITY</p>
+	</div>
+</body>
+</html>

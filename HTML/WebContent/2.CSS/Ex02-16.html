@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>선택자 우선순위</title>
+	
+	<style>
+		p{ color:pink; }
+		#ctxt{ color:orange; }
+		p.atxt{ color:blue; }
+		p.atxt.btxt { color:yellow; }
+		p:first-child{ color:red; }
+	</style>
+</head>
+<body>
+	<p id="ctxt" class="atxt btxt"
+	style="color:green">
+	한국인은 비타민 D가 부족한 사람이 많다.</p>
+	<p>비타민 D는 햇빛에 있다.</p>
+</body>
+</html>
+
+<!-- 
+1. class !important
+2. inline 속성
+3. id 선택자
+4. 클래스의 자식클래스
+5. 가상 요소 선택자
+6. 타입선택자
+ -->

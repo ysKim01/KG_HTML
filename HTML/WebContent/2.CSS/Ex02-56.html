@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>둥근 테두리2</title>
+	<style>
+		.radius{
+			display : inline-block;
+			padding : 40px 0;
+			text-align : center;
+			background-color : #07d;
+		}
+		.radius1 {
+			width : 230px;
+			margin : 10px;
+			border-radius : 15px / 70px;
+		}
+		.radius2 {
+			width : 490px;
+			border-radius : 15px 70px 15px 70px / 70px 15px 70px 15px ;
+			/* TL_x TR_x BR_x BL_x / TL_y TR_y BR_y BL_y */
+		}
+		.radius3 {
+			width : 490px;
+			border-radius : 15px 70px / 70px 15px ;
+		}
+	</style>
+</head>
+<body>
+	<span class="radius radius1">
+	border-radius:15px / 70px</span>
+	<span class="radius radius2">
+	border-radius:15px 70px 15px 70px /
+	 70px 15px 70px 15px</span>
+	 <span class="radius radius3">
+	border-radius:15px 70px / 70px 15px</span>
+	
+</body>
+</html>
+
+
+
+

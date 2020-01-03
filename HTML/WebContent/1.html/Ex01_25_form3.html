@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table</title>
+
+</head>
+<body>
+<!-- 
+ - get  : 정보를 주소창에 같이 보냄
+ - post : 안보임
+ 
+ 
+ - 아래 타입들 크롬에서 열어야 정상동작함
+-->
+	<form action="#" method="get">
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>가입목적 : <br>
+				<textarea rows="5" cols="100"></textarea>
+			</p>
+			<p>전화번호 : 
+				<select name="tel1">
+					<option selected="selected">지역번호</option>
+					<option value="02">02</option>
+					<option value="031">031</option>
+					<option value="062">062</option>
+				</select>
+				<input type="text" name="tel2">
+				<input type="text" name="tel3">
+				<input type="submit" value="확인">
+			</p>
+			
+		</fieldset>
+	</form>
+</body>
+</html>

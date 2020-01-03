@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table</title>
+
+</head>
+<body>
+<!-- 
+ - get  : 정보를 주소창에 같이 보냄
+ - post : 안보임
+ 
+ 
+ - 아래 타입들 크롬에서 열어야 정상동작함
+-->
+	<form action="#" method="post">
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>ID : <input type="text" name="userId"></p>
+			<p>PW : <input type="password" name="userPw"> PW확인 : <input type="password" name="userPwOK"></p>
+			<p>이름 : <input type="text" name="userName"></p>
+			<p>전화번호 : 
+				<select name="tel1">
+					<option selected="selected">지역번호</option>
+					<option value="010">010</option>
+					<option value="02">02</option>
+				</select>
+				-<input type="text" name="tel2">
+				-<input type="text" name="tel3">
+			</p>
+			<p>주소 : 
+				<select name="add1">
+					<option selected="selected">지역</option>
+					<option value="seoul">서울</option>
+					<option value="gyoung">경기</option>
+					<option value="chung">충청</option>
+				</select>
+				<input type="text" name="add2" width="100">
+			</p>
+			<p><input type="submit" value="확인"> <input type="reset" value="취소"></p>
+		</fieldset>
+	</form>
+</body>
+</html>
