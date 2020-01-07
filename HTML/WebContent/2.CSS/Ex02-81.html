@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		.flexbox {
+			display : flex;
+			height : 200px;
+			background : #ccc;
+			align-items : flex-start;  /* 글씨가 나오는 부분만 표현 */
+			align-items : flex-end;  /* 글씨가 나오는 부분만 표현 */
+		}
+		.flexbox div {
+			flex : 1 1 100px;
+			background : darkblue;
+			margin : 10px;
+			font-size : 20px;
+			color : #fff;
+		}
+	</style>
+</head> 
+<body>
+	<div class="flexbox">
+		<div>child1</div>
+		<div><h2>child2</h2></div>
+		<div>child3</div>
+	</div>
+</body> 
+</html>

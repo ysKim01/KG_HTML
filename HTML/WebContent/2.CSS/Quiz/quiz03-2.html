@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		body, h1, h2, ul, li, p { margin : 0; padding : 0; }
+		li { list-style-type : none; }
+		header { background : orange; }
+		header h1 { 
+			font-style : normal;
+			font-size : 25px; 
+			color : white; 
+			padding : 10px;
+		}
+		#container {
+			position : relative;
+		}
+		.wrap a {
+			color : #000;
+		}
+		.gnb1, .gnb2, .gnb3 {
+			box-sizing : border-box;
+		}
+		.gnb1 {
+			float : left;
+			width : 25%;
+		}
+		.gnb1 li {
+			padding : 20px;
+			box-sizing : border-box;
+			margin : 10px;
+			padding : 5px;
+			background : lime;
+		}
+		.gnb2 {
+			float : left;
+			width : 50%;
+			padding : 20px;
+		}
+		.gnb2 strong {
+			font-size : 20px;
+			margin-bottom : 3px;
+		}
+		.none { 
+			float : left;
+			width : 25%;}
+		.gnb3 {
+			background : lime;
+			margin : 10px;
+			padding : 10px;
+		}
+		.gnb3 li {
+			padding : 5px;
+		}
+		footer { 
+			background : #aaa;
+			padding : 10px;
+		}
+		#container:after {
+			content:"";
+			display : block; 
+			clear : both;
+		}
+		/* 교훈 : float할꺼면 float 단위를 div로 감싸야 margin, padding 잡기 편하다.*/
+		
+		/* 반응형 사이즈 -> 창이 줄어들면 디자인이 달라지는 것*/
+		@media all and (min-width:768px) and (max-width:){
+			.gnb1 {	float : left; width:25%; }
+			.gnb2 {	float : left; width:75%; }
+			.gnb3 {	claer : both; }
+		}
+	</style>
+</head> 
+<body>
+    <div class="wrap">
+	    <header>
+		    <h1>
+		        Musee d'Orsay
+            </h1>
+	    </header>
+	    <div id="container">
+		    <ul class="gnb1">
+                <li><a href="#">작가의 작품</a></li>
+                <li><a href="#">작가의 시대</a></li>
+                <li><a href="#">작가의 일생</a></li>
+            </ul>
+            <ul class="gnb2">
+            	<li><strong>PICTURES</strong></li>
+                <li><a href="#">작품 1</a></li>
+                <li><a href="#">작품 2</a></li>
+                <li><a href="#">작품 3</a></li>
+                <li><a href="#">작품 4</a></li>
+                <li><a href="#">작품 5</a></li>
+                <li><a href="#">작품 6</a></li>
+                <li><a href="#">작품 7</a></li>
+                <li><a href="#">작품 8</a></li>
+                <li><a href="#">작품 9</a></li>
+                <li><a href="#">작품 10</a></li>
+                <li><a href="#">작품 11</a></li>
+            </ul>
+            <div class="none">
+            <ul class="gnb3">
+                <li><strong>전세계인들에게 제일 사랑받는 서양 미술사의 시대</strong></li>
+                <li><a href="#">English String 1</a></li>
+                <li><a href="#">English String 2</a></li>
+                <li><a href="#">English String 3</a></li>
+            </ul>
+            </div>
+	    </div>
+        <footer>
+            <p>Copyright &copy; Allright Reserved.</p>
+        </footer>
+  	 </div>
+</body> 
+</html>

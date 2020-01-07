@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		/* 부트스트랩 : 툴?*/
+		body, h1, h2, ul, li, p { margin : 0; padding : 0; }
+		li { list-style-type : none; }
+		header { background : orange; }
+		header h1 { 
+			font-style : normal;
+			font-size : 25px; 
+			color : white; 
+			padding : 10px;
+		}
+		#container {
+			position : relative;
+		}
+		.wrap a {
+			color : #000;
+		}
+		.gnb1, .gnb2, .gnb3 {
+			padding : 20px;
+			box-sizing : border-box;
+		}
+		.gnb1 {
+			float : left;
+			width : 25%;
+		}
+		.gnb2 {
+			float : left;
+			width : 50%;
+			background : skyblue;
+		}
+		.gnb3 {
+			float : left;
+			width : 25%;
+		}
+		footer { 
+			background : #aaa;
+			padding : 10px;
+		}
+		#container:after {
+			content:"";
+			display : block; 
+			clear : both;
+		}
+	</style>
+</head> 
+<body>
+    <div class="wrap">
+	    <header>
+		    <h1>
+		        Musee d'Orsay
+            </h1>
+	    </header>
+	    <div id="container">
+		    <ul class="gnb1">
+                <li><strong>ARTIST</strong></li>
+                <li><a href="#">작가의 작품</a></li>
+                <li><a href="#">작가의 시대</a></li>
+                <li><a href="#">작가의 일생</a></li>
+            </ul>
+            <ul class="gnb2">
+                <li><a href="#">작품 1</a></li>
+                <li><a href="#">작품 2</a></li>
+                <li><a href="#">작품 3</a></li>
+                <li><a href="#">작품 4</a></li>
+                <li><a href="#">작품 5</a></li>
+                <li><a href="#">작품 6</a></li>
+                <li><a href="#">작품 7</a></li>
+                <li><a href="#">작품 8</a></li>
+                <li><a href="#">작품 9</a></li>
+                <li><a href="#">작품 10</a></li>
+                <li><a href="#">작품 11</a></li>
+            </ul>
+            <ul class="gnb3">
+                <li><strong>전세계인들에게 제일 사랑받는 서양 미술사의 시대</strong></li>
+                <li><a href="#">English String 1</a></li>
+                <li><a href="#">English String 2</a></li>
+                <li><a href="#">English String 3</a></li>
+            </ul>
+	    </div>
+        <footer>
+            <p>Copyright &copy; Allright Reserved.</p>
+        </footer>
+  	 </div>
+</body> 
+</html>

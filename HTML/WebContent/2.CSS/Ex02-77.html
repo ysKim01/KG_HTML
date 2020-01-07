@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		.flexbox{
+			display : flex;
+			height : 200px;
+			background : #ccc;
+		}
+		.flexbox div {
+			flex : 0 0 100; /* 증가, 감소, 기본*/
+			background : darkcyan;
+			margin : 10px;
+			/*요소에 맞춰 너비 자동 조절*/
+		}
+	</style>
+</head> 
+<body>
+	<div class="flexbox">
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+	</div>
+</body> 
+</html>

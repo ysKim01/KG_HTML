@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		.flexbox {
+			display : flex;
+			height : 200px;
+			background : #ccc;
+			align-items : flex-start;  /* 글씨가 나오는 부분만 표현 */
+		}
+		.flexbox div {
+			flex : 1 1 100px;
+			background : darkblue;
+			margin : 10px;
+			font-size : 20px;
+			color : #fff;
+		}
+		.flexbox > div:nth-child(3) {
+			align-self : flex-end;
+			
+		}
+	</style>
+</head> 
+<body>
+	<div class="flexbox">
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+		<div><img src="../img/flex.png"></div>
+	</div>
+</body> 
+</html>

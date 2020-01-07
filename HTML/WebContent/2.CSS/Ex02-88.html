@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+<style>
+	li { list-style-type : none; }
+	a {
+		text-decoration : none;
+		color : #000;
+	}
+	li ul {
+		display : none;
+		height : auto;
+		padding : 0;
+		margin : 0;
+		border : 0;
+		position : absolute;
+		width : 200px;
+		z-index : 200;
+	}
+	.drop:hover ul{
+		display : block;
+	}
+</style>
+</head> 
+<body>
+	<ul>
+		<li class="drop"><a href="#">products</a>
+		<ul>
+			<li><a href="#">Sliders</a></li>
+			<li><a href="#">Galleries</a></li>
+			<li><a href="#">Apps</a></li>
+			<li><a href="#">Extensions</a></li>
+		</ul>
+		</li>
+	</ul>
+</body> 
+</html>

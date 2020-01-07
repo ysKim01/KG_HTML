@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8">
+<title>Title</title> 
+	<style>
+		.wrap {
+			display : grid;
+			grid-template-columns : 30% 70%; 		/* column 잡기 */
+			grid-template-rows : 50px 150px 50px; 	/* row 잡기 */ 
+		}
+		.wrap div {
+			margin : 1px;
+			padding : 10px;
+			font-size : 20px;
+		}
+		.grid1 {
+			grid-column-start : 1;
+			grid-column-end : 3;
+			background : lightgreen;
+		}
+		.grid2 {
+			grid-column-start : 1;
+			grid-column-end : 2;
+			background : lightpink;
+		}
+		.grid3 {
+			grid-column-start : 2;
+			grid-column-end : 3;
+			background : lightblue;
+		}
+		.grid4 {
+			grid-column-start : 1;
+			grid-column-end : 3;
+			background : lightyellow;
+		}
+		@media screen and (max-width: 700px) { 
+			.wrap {
+				display : block;
+			}
+		}
+	</style>
+</head> 
+<body>
+	<div class="wrap">
+		<div class="grid1">header</div>
+		<div class="grid2">sidemenu</div>
+		<div class="grid3">content</div>
+		<div class="grid4">footer</div>
+	</div>
+</body> 
+</html>
