@@ -2,9 +2,12 @@
 /* 소스프리징이 될 경우 웹브라우저를 끄고 새로 열거나 캐쉬를 지워라 */
 .test { color : red;}
 
+
+/*=============== Common ================*/
 * { margin:0; padding:0; }
 a { text-decoration : none; }
 ul li { list-style-type : none; }
+
 
 /*================= Top =================*/
 .top { width : 100%; background : lightgray;}
@@ -13,6 +16,14 @@ ul li { list-style-type : none; }
 }
 .top_menu_ul {
 	display : flex;
+}
+.top_menu_ul li {
+	flex : 1; /* 증가, 감소, 기본*/
+	background : darkcyan;
+	margin : 10px;
+}
+.top_menu_ul li:first-child {
+	bacground-size : contain;
 }
 .top_menu_sub li {
 	display : none;
