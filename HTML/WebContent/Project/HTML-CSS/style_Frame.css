@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/*================= Wrap =================*/
+.wrap {
+	display : block;
+	width : 100%;
+}
+
+/*================= Top =================*/
+.top {
+	position : fixed;
+	top : 0;
+	left : 0;
+	width : 100%;
+	z-index: 10;
+    background: white;
+}
+
+.top_logo {	
+	display : inline-block;
+	position : relative;
+	width : 100%;
+	height : 50px;
+}
+.top_logo a {
+	position : relative;
+	left : 50%;
+	margin : -85px;
+	vertical-align : middle;
+	font-size : 20px;
+	font-family: 'Shadows into' ;
+}
+.top_logo a:active {
+	color : black;
+}
+.top_logo a img{
+	height : 100%;
+	vertical-align : middle;
+}
+
+.top_menu {
+	position : relative;
+	width : 100%;
+	height : 30px;
+	background : #ffd700;
+}
+.top_menu ul{
+	position : relative;
+	left : 20px;
+}
+.top_menu > ul > li {
+	box-sizing : border-box;
+	position: absolute; top: 3px;
+	width : 80px;
+	text-align : center;
+	font-family: 'Cute Font';
+}
+.top_menu > ul > li:nth-child(1){left : 30px;}
+.top_menu > ul > li:nth-child(2){left : 120px;}
+.top_menu > ul > li:nth-child(3){left : 210px;}
+.top_menu > ul > li:nth-child(4){left : 300px;}
+.top_menu > ul > li > a{
+	color: black;
+	font-size : 20px;
+	font-weight : bold;
+}
+
+/*================= Main_body =================*/
+.main {
+	box-sizing : border-box;
+	position : relative;
+	margin-top : 80px;
+	overflow : hidden;
+	width : 100%;
+}
+
+/*================= Bottom =================*/
+.bottom {
+	box-sizing : border-box;
+	width : 100%;
+    padding: 20px 0 20px 40px;
+    background: #464646;
+    color : white;
+    font-size: 14px;
+}
+
+/*================= Reactive =================*/
+@media screen and (max-width: 1000px) { 
+}
+

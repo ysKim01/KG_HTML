@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-* { margin:0; padding:0; }
+* { margin:0; padding:0;}
 
 a { text-decoration : none; }
 
@@ -11,3 +11,25 @@ li { list-style-type : none; }
 	content : "";
 	clear : both;
 }
+
+
+
+
+/*
+@font-face{
+	font-family : 'Shadow';
+	src : url('font/ShadowsIntoLight-Regular.ttf') format('truetype');	
+};
+@font-face{
+	font-family : 'Cute';
+	src : url('font/CuteFont-Regular.ttf') format('truetype');	
+};
+@font-face{
+	font-family : 'Amatics';
+	src : url('font/AmaticSC-Regular.ttf') format('truetype');
+};
+@font-face{
+	font-family : 'Paris';
+	src : url('./font/Parisienne-Regular.ttf') format('truetype');
+};
+*/

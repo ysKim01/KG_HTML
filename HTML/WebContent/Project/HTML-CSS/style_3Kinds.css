@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*================= Main =================*/
+.main_title {
+	padding : 20px 30px;
+	
+	font-family: Cute font;
+    font-size: 30px;
+}
+.main_content {
+	box-sizing : border-box;
+	margin : 0 20px 20px 20px;
+	padding : 20px; 
+	text-indent: 10px;
+}
+
+.kind {
+	border: 1px solid #000;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 20px;
+    width : 800px;
+}
+.kind img {
+	height : 250px;
+	width : 250px;
+}
+.kind_maintext {
+	position: absolute;
+    top: 20px;
+    left: 270px;
+    margin: 0 20px;
+}
+.kind_descrip { text-indent: 10px; }
+
+/*================= Reactive =================*/
+@media screen and (max-width: 1000px) { 
+}
+
