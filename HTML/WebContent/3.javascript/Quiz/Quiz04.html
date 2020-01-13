@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz04</title>
+<style>
+	table{
+		border-collapse : collapse;
+	}
+	td {
+		border : 1px solid #000;
+	}
+</style>
+<script type="text/javascript">
+	function func1(){
+		var score = Number(prompt('점수를 입력하세요 : ',''));
+		if(score >= 60)
+			document.write("합격");
+		else
+			document.write("불합격");
+	}
+	function func2(){
+		var num = Number(prompt('단을 입력하세요 : ',''));
+		var table = '<table>';
+		table += '<tr>';
+		for(var j=1; j<=9; j++){
+			table += '<td>' + num + ' * ' + j + ' = ' + (num*j) + '</td>';
+		}
+		table += '</tr>';
+		table += '</table>';
+		document.write(table);
+	}
+	function func3(){
+		var num1 = Number(prompt('첫번째 숫자를 입력하세요 : ',''));
+		var num2 = Number(prompt('두번째 숫자를 입력하세요 : ',''));
+		var result = '';
+		result += num1+" + "+num2+" = "+(num1+num2)+"<br>";
+		result += num1+" - "+num2+" = "+(num1-num2)+"<br>";
+		result += num1+" * "+num2+" = "+(num1*num2)+"<br>";
+		result += num1+" / "+num2+" = "+(num1/num2)+"<br>";
+		document.write(result);
+	}
+	var top = '메뉴 : 1.합격여부  2.구구단  3.사칙연산';
+	document.write()
+	var menu = Number(prompt('원하는 메뉴를 입력하세요 : ',''));
+	switch(menu){
+	case 1 : 
+		func1(); break;
+	case 2 : 
+		func2(); break;
+	case 3 : 
+		func3(); break;
+	default : 
+		document.write('잘못 입력 하셨습니다.');
+		location.reload(); // 새로고침
+		break;
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내장함수</title>
+<script type="text/javascript">
+	// 인코딩, 디코딩 함수
+	var encodeStr = encodeURIComponent('자바 스크립트');
+	console.log(encodeStr);
+	var decodeStr = decodeURIComponent(encodeStr);
+	console.log(decodeStr);
+	
+	var num1 = '숫자';
+	if(!isNaN(num1)){
+		console.log(num1 + '은(는) 숫자입니다.');
+	}else{
+		console.log(num1 + '은(는) 숫자가 아닙니다.');
+	}
+	
+	var num2 = 1/0;
+	if(isFinite(num2)){
+		console.log('유한');
+	}else{
+		console.log('무한');
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

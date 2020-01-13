@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수의 범위</title>
+<script type="text/javascript">
+	var sum1 = 10; 		// 전역 변수
+	function add1(){
+		sum1 += 10;
+	}
+	add1();
+	console.log(sum1);
+	
+	var sum2 = 20;
+	function add2(){
+		var sum2 = 40;		// 지역변수
+		console.log(sum2);
+	}
+	add2();
+</script>
+</head>
+<body>
+</body>
+</html>

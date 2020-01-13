@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz04</title>
+<style>
+	table{
+		border-collapse : collapse;
+	}
+	td {
+		border : 1px solid #000;
+	}
+</style>
+<script type="text/javascript">
+	function sum(num1, num2){
+		document.write(num1 + " + " + num2 + " = " + (num1+num2));
+	}
+	function min(num1, num2){
+		document.write(num1 + " - " + num2 + " = " + (num1-num2));	
+	}
+	function mul(num1, num2){
+		document.write(num1 + " * " + num2 + " = " + (num1*num2));
+	}
+	function div(num1, num2){
+		document.write(num1 + " / " + num2 + " = " + (num1/num2));
+	}
+	
+	var num1 = Number(prompt('첫번째 숫자를 입력하세요 : ',''));
+	var num2 = Number(prompt('두번째 숫자를 입력하세요 : ',''));
+	var cal = prompt('연산기호를 입력하세요 : ','');
+	
+	switch(cal){
+	case '+' : sum(num1,num2); break;
+	case '-' : min(num1,num2); break;
+	case '*' : mul(num1,num2); break;
+	case '/' : div(num1,num2); break;
+	default : 
+		alert('해당 연산이 없습니다.');
+		location.reload();
+		break;
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>
