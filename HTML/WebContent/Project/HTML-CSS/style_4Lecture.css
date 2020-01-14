@@ -11,7 +11,6 @@
 	box-sizing : border-box;
 	margin : 0 20px 20px 20px;
 	padding : 20px; 
-	text-indent: 10px;
 }
 
 .lecture {
@@ -26,14 +25,32 @@
 	width : 200px;
 }
 .lecture_main {
-	position: absolute;
-    top: 20px;
-    left: 230px;
-    margin: 0 20px;
+	position: absolute; top: 10px; left: 230px;
+    padding : 0 20px;
     width : 500px;
+    height : 200px;
+    background : lightgoldenrodyellow;
+    overflow : auto;
+}
+.lecture_main h3 {
+	font-size : 35px;
+	font-family : Cute font;
 }
 .lecture_main li {
-	padding-bottom : 10px;
+	padding : 10px 0;
+	padding-left : 110px;
+	background-size : 100px;
+	background-repeat : no-repeat;
+	background-position: 0px 5px; 
+}
+.lecture_main li:nth-child(1) { 
+	background-image : url(./img/lecture_con1.PNG);
+}
+.lecture_main li:nth-child(2) { 
+	background-image : url(./img/lecture_con2.PNG);
+}
+.lecture_main li:nth-child(3) { 
+	background-image : url(./img/lecture_con3.PNG);
 }
 
 .lecture_payment {

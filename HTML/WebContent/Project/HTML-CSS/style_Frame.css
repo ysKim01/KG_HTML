@@ -55,10 +55,12 @@
 	text-align : center;
 	font-family: 'Cute Font';
 }
-.top_menu > ul > li:nth-child(1){left : 30px;}
-.top_menu > ul > li:nth-child(2){left : 120px;}
-.top_menu > ul > li:nth-child(3){left : 210px;}
-.top_menu > ul > li:nth-child(4){left : 300px;}
+.top_menu > ul > li:nth-child(1){left : -10px; top : 5px;}
+.top_menu > ul > li:nth-child(2){left : 80px;}
+.top_menu > ul > li:nth-child(3){left : 170px;}
+.top_menu > ul > li:nth-child(4){left : 260px;}
+.top_menu > ul > li:nth-child(5){left : 350px;}
+.top_menu > ul > li:nth-child(1) img {width:20px; height:20px;}
 .top_menu > ul > li > a{
 	color: black;
 	font-size : 20px;
