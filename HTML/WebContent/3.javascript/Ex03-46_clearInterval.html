@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>clearInterval</title>
+<style>
+
+</style>
+<script type="text/javascript">
+window.onload = function(){
+	var bt = document.getElementById('bt');
+	var i = 0;
+	var increase = setInterval(function(){
+		i++;
+		alert('3초마다 실행'+i);
+	},3000);
+	bt.onclick = function(){
+		clearInterval(increase);
+	};
+}
+</script>
+</head>
+<body>
+	<button id='bt'>멈춤</button>
+</body>
+</html>

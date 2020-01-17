@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>multi return</title>
+<style>
+
+</style>
+<script type="text/javascript">
+	function test(){
+		return{
+			re1 : 'id',
+			re2 : 1
+		}
+	}
+</script>
+</head>
+<body>
+	<script>
+		let value = test();
+		console.log(value.r1);
+		console.log(value.r2);
+	</script>
+</body>
+</html>

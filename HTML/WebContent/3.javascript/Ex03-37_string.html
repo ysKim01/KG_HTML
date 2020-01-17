@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>string</title>
+<script type="text/javascript">
+	var str = 'javas:cript';
+	console.log(str.charAt(0));
+	
+	console.log(str.indexOf('a'));		// 없다면 -1반환
+	console.log(str.lastIndexOf('a'));
+	
+	console.log(str.includes('script'));
+	
+	console.log(str.substring(0,2)); //0번 ~ 1번 (0~1)
+	console.log(str.substr(0,2));	// 0번 부터 2개 (0~1)
+	console.log(str.substr(0,2));
+	
+	var sp = str.split(':'); // : 기준으로 자름
+	console.log(sp[0] + " = " + sp[1]);
+	
+	var str = 'm_out.gif';
+	console.log(str.replace('out','in')); // 단어 교체;
+	
+	var str1 = 'nav';
+	var str2 = '_bg';
+	console.log(str1.concat(str2)); // 합치기
+	
+	var str3 = '  hel  lo  ';
+	console.log(str3.trim()); //문자열 앞뒤 공백 제거
+	
+	var str4 = "AbCd";
+	console.log(str4.toLowerCase());
+	console.log(str4.toUpperCase());
+	
+</script>
+</head>
+<body>
+</body>
+</html>

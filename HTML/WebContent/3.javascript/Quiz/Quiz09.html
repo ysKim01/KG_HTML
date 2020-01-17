@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz09</title>
+<script type="text/javascript">
+	class Student{
+		constructor(){
+			this.kor = 0;
+			this.eng = 0;
+			this.math = 0;
+		}
+		sum(){
+			return this.kor + this.eng + this.math;
+		}
+		avg(){
+			return this.sum()/3;
+		}
+		printOut(){
+			return '총점 : ' + this.sum() + ' 평균 : ' + this.avg();
+		}
+		
+		get getKor(){ 		//getter
+			return this.kor;
+		}
+		set setKor(num){	//setter
+			this.kor = num;
+		}
+		get getEng(){ 		//getter
+			return this.eng;
+		}
+		set setEng(num){	//setter
+			this.eng = num;
+		}
+		get getMath(){ 		//getter
+			return this.math;
+		}
+		set setMath(num){	//setter
+			this.math = num;
+		}
+	}
+	var stu1 = new Student();
+	stu1.setKor = Number(prompt('국어 점수 입력 : ',''));
+	stu1.setEng = Number(prompt('영어 점수 입력 : ',''));
+	stu1.setMath = Number(prompt('수학 점수 입력 : ',''));
+	console.log(stu1.printOut());
+</script>
+</head>
+<body>
+</body>
+</html>

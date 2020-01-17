@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function dateTest() {
+		setInterval(function(){
+			document.getElementById('clock').innerHTML = new Date;
+		}, 1000);
+	}
+
+</script>
+</head>
+<body>
+	<div id='clock'></div>
+	<script>
+		dateTest();
+	</script>
+</body>
+</html>

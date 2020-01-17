@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규 표현식</title>
+<script type="text/javascript">
+	var hpReg=/^\d{10,11}$; //10 or 11 자리 만들어라
+	var hp1 = "01012345";
+	var hp1 = "01012345678";
+	console.log(hpReg.test(hp1));
+	console.log(hpReg.test(hp2));
+	
+	var emailReg = /^[A-za-z0-9!#$%^&*_-]+@[A-za-z0-9]+(\.[A-Za-z0-9_-]+){1,2}$;
+	var email1 = 'abc&1_23&A-BC@kb';
+	var email2 = 'abc&1_23&A-BC@kb.com';
+	var email3 = 'abc&1_23&A-BC@kb.co.kr';
+	var email4 = 'abc&1_23&A-BC@kb.abc.co.kr';
+	console.log(emailReg.test(email1));
+	console.log(emailReg.test(email2));
+	console.log(emailReg.test(email3));
+	console.log(emailReg.test(email4));
+</script>
+</head>
+<body>
+</body>
+</html>

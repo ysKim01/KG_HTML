@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>class</title>
+<script type="text/javascript">
+	class SubjectInfo{
+		constructor(subject, credit){
+			this.subject = subject;
+			this.credit = credit;
+			this.days = [80,120,140];
+			this.day = this.days[0];
+		}
+		printOut(){
+			return '과목 : ' + this.subject + ', 학점 : ' + this.credit + 
+			' 수업일수 : ' + this.day;
+		}
+		
+		get lessonTime(){ 		//getter
+			return this.day;
+		}
+		set lessonTime(num){	//setter
+			this.day = this.days[num];
+		}
+		
+		
+	}
+	var sub1 = new SubjectInfo('html', 1);
+	console.log(sub1.subject);
+	console.log(sub1.printOut());
+	sub1.lessonTime = 1; // set함수 사용법
+	console.log(sub1.lessonTime); // get함수 사용시 ()안씀
+</script>
+</head>
+<body>
+</body>
+</html>
