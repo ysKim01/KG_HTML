@@ -2,27 +2,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>객체 생성</title>
-<script type="text/javascript">
+<title>Insert title here</title>
+<script>
 	// 객체 리터럴
-	var circle = {
+	var Circle = {
 			color : 'yellow',
-			diameter : 100,
+			diameter : 100,		// 지름
 			radius : function(){
 				return this.diameter/2;
 			}
-	};
-	console.log(circle.color);
-	console.log(circle.diameter);
-	console.log(circle.radius());
+	}
+	console.log(Circle.color);
+	console.log(Circle.diameter);
+	console.log(Circle.radius());
 	
 	// 객체 생성자 함수
-	function Triangle(b, h) {
-		this.base=b;
-		this.height=h;
+	function Triangle(b, h){
+		this.base = b;
+		this.height = h;
 		this.area = function(){
 			return b*h/2;
-		};
+		}
 	}
 	var triangle1 = new Triangle(15,15);
 	console.log(triangle1.base);
@@ -35,5 +35,6 @@
 </script>
 </head>
 <body>
+
 </body>
 </html>

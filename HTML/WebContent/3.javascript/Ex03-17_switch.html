@@ -2,23 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>switch 문</title>
-<script type="text/javascript">
+<title>Insert title here</title>
+<script>
 	var age = prompt('아동, 청소년, 성인 중 선택','');
-	var subject = '';
 	switch(age){
-	case '아동' : 
+	case '아동' :
 		age += ' : 입장 무료'; break;
-	case '청소년' : 
+	case '청소년' :
 		age += ' : 입장료 2,000원'; break;
-	case '성인' : 
-		age += ' : 입장료 2,000원'; break;
-	default:
-		age += ' : 입력 값을 다시 확인 하세요'; break;
+	case '성인' :
+		age += ' : 입장료 4,000원'; break;
+	default :
+		age += ' : 입력 값을 다시 확인 하세요.'; break;
 	}
-	document.write(age);
+	console.log(age);
 </script>
 </head>
 <body>
+
 </body>
 </html>

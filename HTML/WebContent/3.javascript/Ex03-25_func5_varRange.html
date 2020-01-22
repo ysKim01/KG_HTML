@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 변수의 범위
+	var sum1 = 10; 		// 전역 변수
+	function add1(){
+		sum1 += 10;
+	}
+	add1();
+	console.log(sum1);	// 20
+
+	var sum2 = 10;
+	function add2(){
+		var sum2 = 10;	// 지역변수
+		sum2 += 10;		// 함수 안의 sum2 가 연산된다.
+	}
+	add2();
+	console.log(sum2);	// 10
+</script>
+</head>
+<body>
+
+</body>
+</html>

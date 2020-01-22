@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 즉시 실행 함수
+	(function(){
+		console.log("즉시 실행 함수1");
+	})();
+	
+	(function(x){
+		console.log("즉시 실행 함수2 : " + (x*x));
+	})(2);
+	
+	(func = function(x){
+		console.log("즉시 실행 함수3 : " + (x*x));
+	})(3);
+	func(4);
+</script>
+</head>
+<body>
+
+</body>
+</html>

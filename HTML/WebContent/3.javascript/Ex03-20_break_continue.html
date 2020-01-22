@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// break
+	var sum_break = 0;
+	var limit = 5;
+	for(var i=1;i<=20;i++){
+		sum_break += i;
+		if(i===limit) break;
+	}
+	console.log(sum_break);
+	
+	// continue
+	var sum_continue = 0;
+	var num = '3의 배수 : ';
+	for(var i=1;i<=10;i++){
+		if(i%3==0){
+			num += i + ' ';
+			continue;
+		}		
+		sum_continue += i;
+	}
+	console.log(num + '제외 총 합 : ' + sum_continue);
+</script>
+</head>
+<body>
+
+</body>
+</html>

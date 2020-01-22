@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// ============ 내장 함수 =================
+	
+	// 1. 인코딩, 디코딩
+	var str = '자바 스크립트';
+	var str_Encode = encodeURIComponent(str);
+	console.log(str_Encode);
+	var str_Decode = decodeURIComponent(str_Encode);
+	console.log(str_Decode);
+	
+	// 2. 숫자 판별
+	var num = '숫자';
+	if(isNaN(num)){ // is Not a Number
+		console.log(num + '은(는) 숫자가 아닙니다.');
+	}else{
+		console.log(num + '은(는) 숫자 입니다.');
+	}
+	
+	// 3. 유한 무한 판별
+	var num_infinite = 1/0;
+	if(isFinite(num_infinite)){
+		console.log('유한값');		
+	}else{
+		console.log('무한값');
+	}
+	
+	// 4. 숫자, 문자 변환 함수
+	var num1 = '10';
+	console.log(Number(num1));
+	var num2 = '100px';
+	console.log(parseInt(num2));
+	var num3 = '33.3%';
+	console.log(parseFloat(num3));
+	var num4 = 10;
+	console.log(typeof num4);
+	console.log(typeof String(num4));
+	var str1 = 'var num5 = 10';
+	var str2 = 'var num6 = 20';
+	eval(str1);	// 문자열을 코드로 인식하게 하는 함수
+	eval(str2);
+	console.log(num5 + num6);
+</script>
+</head>
+<body>
+
+</body>
+</html>

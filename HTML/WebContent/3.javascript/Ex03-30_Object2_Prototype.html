@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//========== Prototype ===================
+	// 객체 생성자 함수에 맴버를 추가할 수 있다.
+		
+	// 객체 생성자 함수
+	function Triangle(b,h){
+		this.base = b;
+		this.height = h;
+	}
+	Triangle.prototype.area = function(){
+		return this.base * this.height / 2;
+	}
+	Triangle.prototype.printOut = function(){
+		var strOut = '';
+		strOut += '밑변 : ' + this.base + ' / ';
+		strOut += '높이 : ' + this.height + ' / ';
+		strOut += '넓이 : ' + this.area() + ' ';
+		return strOut;
+	}
+	
+	var triangle1 = new Triangle(30,20);
+	console.log(triangle1.printOut());
+	var triangle2 = new Triangle(80,40);
+	console.log(triangle2.printOut());
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// ============ 재귀 함수 =================
+	
+	function countDown(n){
+		if(n==0){
+			console.log('호출 끝');
+		}else{
+			console.log('호출 ' + n);
+			countDown(n-1);
+		}
+	}
+	countDown(10);
+</script>
+</head>
+<body>
+
+</body>
+</html>

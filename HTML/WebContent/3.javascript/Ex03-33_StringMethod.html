@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//========== String 관련 메서드 ==================
+
+	// 1. charAt(n) : 문자열의 n번째 인덱스의 문자를 반환
+	// 2-1. indexOf('?') : 문자열 중 앞에서 가장 처음 만난 '?' 문자의 인덱스 반환
+	// 2-2. lastIndexOf('?') : 문자열 중 뒤에서 가장 처음 만난 '?' 문자의 인덱스 반환
+	// 3. includes('???') : '???'가 문자열에 있는지 검사 (boolean)
+	// 4. substring(n,m) : n~(m-1) 인덱스 범위의 문자열 반환
+	// 5. substr(n,m) : n번째 인덱스 문자를 포함 m길이의 문자열 반환
+	// 6. split('?') : ? 기준으로 문자열을 나눠 문자열의 배열로 반환
+	// 7. replace('str1', 'str2') : str1을 찾아 str2로 교체 (맨처음 하나만)
+	// 8. concat('str') : 기존 문자열 뒤에 str을 붙임.
+	// 9. trim() : 문자열 앞뒤 공백 제거
+	// 10-1. toLowerCase() : 문자열의 모든 대문자를 소문자로 바꿈
+	// 10-2. toUpperCase() : 문자열의 모든 소문자를 대문자로 바꿈
+	
+		
+	var str = 'java:script';
+	console.log(str.charAt(0));
+	console.log(str.indexOf('a'));		// 없다면 -1반환
+	console.log(str.lastIndexOf('a'));
+	console.log(str.includes('script'));
+	console.log(str.substring(0,2)); //0번 ~ 1번 (0~1)
+	console.log(str.substr(0,2));	// 0번 부터 2개 (0~1)
+
+	var sp = str.split(':'); // : 기준으로 자름
+	console.log(sp[0] + " = " + sp[1]);
+
+	var str = 'm_out.gif';
+	console.log(str.replace('out','in')); // 단어 교체;
+	
+	var str1 = 'nav';
+	var str2 = '_bg';
+	console.log(str1.concat(str2)); // 합치기
+
+	var str3 = '  hel  lo  ';
+	console.log(str3.trim()); //문자열 앞뒤 공백 제거
+
+	var str4 = "AbCd";
+	console.log(str4.toLowerCase());
+	console.log(str4.toUpperCase());
+</script>
+</head>
+<body>
+
+</body>
+</html>

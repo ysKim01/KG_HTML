@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 클로져
+	
+	// 카운터 클로저를 생성합니다. 
+	var counter = (function() { 
+		// private 변수 입니다.(외부 접근 불가) 
+		var privateCounter = 0; 
+		// private 함수 입니다.(외부 접근 불가) 
+		function changeCounter(val) { 
+			privateCounter += val; 
+		} 
+		
+		// public 함수를 가지는 객체를 반환합니다. 
+		return { 
+			// 증가 기능을 가지는 public 함수 입니다. 
+			inc: function() { changeCounter(1); }, 
+			// 감소 기능을 가지는 public 함수 입니다. 
+			dec: function() { changeCounter(-1); }, 
+			// public 함수 입니다.(현재값 조회) 
+			val: function() { return privateCounter; } 
+		}; 
+	})();
+	counter.inc(); 
+	counter.inc(); 
+	console.log("after increment : " + counter.val()); 
+	counter.dec(); 
+	console.log("after decrement : " + counter.val());
+
+	
+	// 매개변수의 생존
+	function multi(n){
+		// var n = n(값); <- 이런식으로 n이 계속 살아있음.
+		console.log('n의 값(외부) : ' + n);// 처음 한번만 실행
+		return function(){
+			console.log('n의 값(내부) : ' + n);
+			return n *= n;
+		}
+	}
+	var num1 = multi(10);
+	console.log('num1() 1차 : ' + num1());	// 100
+	console.log('num1() 2차 : ' + num1());	// 10000
+</script>
+</head>
+<body>
+
+</body>
+</html>
