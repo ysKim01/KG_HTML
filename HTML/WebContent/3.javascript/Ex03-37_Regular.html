@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//============ 정규 표현식 ===============
+	
+	// < 정규표현식 특수문자 >  -> 기본적으로 문자 하나에 대응된다.
+	
+	// 1. / : 정규표현식을 감싸는 역할
+
+	// 2. \ : 특수문자 앞 > 특수문자 그대로 쓴다는 의미
+	//		    일반문자 앞 > 특수 기능
+
+	// 3. ^ : 입력값의 시작   	
+	// ex) /^This/ -> 'This is..' (맨앞 T에 대응)
+
+	// 4. $ : 입력값의 끝
+	// ex) /end$/ -> 'This is the end' (맨뒤 d에 대응) 
+
+	// 5. * : 0번 이상 반복
+	// ex) /se*/ -> 'seeeee'
+	// 6. ? : 0번 또는 1번 이상 반복
+	// 7. + : 1번 이상 반복
+
+	// 8. {n} : 정확히 n번 반복
+	// 9. {n,} : n번 이상 반복
+	// 10. {n,m} : n~m번
+
+	// 11. . : 줄바꿈을 제외한 모든 문자
+	// ex) /a.e/ -> 'ape', 'axe'
+
+	// 12. [...] : 대괄호 안의 모든 문자
+	// 13. [^...] : 대괄호 안의 문자를 제외한 모든 문자
+	// ex) /a[^px]/ -> 'ale'(o), 'ape'(x), 'axe'(x)
+	//
+	// 14 (x) : 묶음 
+	
+	// 2-2. \문자
+	// \n : 줄바꿈
+	// \s : 하나의 공백 문자
+	// \S : 공백문자가 아닌 문자
+	// \t : 탭
+	// \d : 0~9
+	// \D : 숫자를 제외한 모든 문자
+	// \w : 알파벳, 숫자, 밑줄
+	// \W : (알파벳, 숫자, 밑줄)을 제외한 문자(특수문자 같은 거)
+	// \b : 단어 경계
+	// ex) /\bno/ -> 'nono' 의 no에 매칭
+	// \B : 단어 경계를 제외한 모든 문자
+	
+	
+	var hpReg=
+		/^\d{10,11}$/;
+	var emailReg = 
+		/^[A-Za-z0-9!#$%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}$/;
+		
+	var hp1 = '010123456';
+	var hp2 = '01012345678';
+	var email1 = 'abc&1_23&A-BC@kg';
+	var email2 = 'abc&1_23&A-BC@kg.com';
+	var email3 = 'abc&1_23&A-BC@kg.co.kr';
+	var email4 = 'abc&1_23&A-BC@kg.abc.co.kr';
+	console.log(hpReg.test(hp1));
+	console.log(hpReg.test(hp2));
+	console.log(emailReg.test(email1));
+	console.log(emailReg.test(email2));
+	console.log(emailReg.test(email3));
+	console.log(emailReg.test(email4));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event</title>
+<style>
+	div { 
+		height : 100px;
+		background : #718c00;
+		margin-top : 20px;
+		color : #fff;
+	}
+</style>
+<script>
+	window.onload = function(){
+		var bt = document.getElementById('bt');
+		var area = document.getElementById('area');
+		
+		// 버튼 클릭됬을 때
+		bt.onclick = function(event){
+			console.log(event.target);
+			console.log(event.type);
+			console.log(event.clientX);	// 웹페이지 기준 x좌표
+			console.log(event.clientY);	// 웹페이지 기준 y좌표
+			console.log(event.screenX);	// 모니터 기준 x좌표
+			console.log(event.screenY); // 모니터 기준 y좌표
+		}
+		
+		// 마우스 버튼이 눌렸을 때 
+		area.onmousedown = function(event){
+			console.log(event.button); 
+			// 왼쪽 : 0, 가운데(휠) : 1, 오른쪽 : 2
+		}
+	}	
+	
+</script>
+</head>
+<body>
+	<button id='bt'>클릭</button>
+	<div id='area'>여기에 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>
+</body>
+</html>
