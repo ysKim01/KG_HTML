@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>querySelector</title>
+<script type="text/javascript">
+	// 요소를 직접 선택
+	window.onload = function(){
+		var list1 = document.querySelector('#box1 > ul > li');
+		var list2 = document.querySelectorAll('#box2 > ul > li');
+		var list3 = document.querySelector('#box1');
+		var list4 = document.querySelector('#box2');
+		console.log(list1);
+		console.log(list2);
+		
+		list1.style.background='#ff6600';
+		list2[0].style.background='#ffff00';	// 1번째
+		list2[1].style.background='#ff00ff';	// 2번째
+		list2.item(2).style.background='#ddd';	// 3번째
+		list3.style.background='#333';
+		list4.style.background='#555';
+		list4.style.color='#ff6600';
+	}
+</script>
+</head>
+<body>
+	<div id='box1'>
+		<ul>
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+		</ul>
+	</div>
+	<div id='box2'>
+		<ul>
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+		</ul>
+	</div>
+</body>
+</html>

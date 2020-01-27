@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>navigator</title>
+<script>
+	var browser = navigator.userAgent; // 브라우저가 서버측으로 전송하는 USER-AGENT HTTP 헤더 내용
+	alert(browser);
+	var browserName = '';
+	
+	// 
+	if(browser.match(/Trident/)){
+		browserName='Explorer';
+	}else if(browser.match(/Chrome/)){
+		browserName='Chrome';
+	}else if(browser.match(/FireFox/)){
+		browserName='Fire Fox';
+	}else{
+		browserName='Unknown';
+	}
+	alert(browserName);
+	// 브라우저 및 모바일 디바이스 종류를 통한 분기도 가능
+	// 링크 : https://amagrammer91.tistory.com/5
+</script>
+</head>
+<body>
+	
+</body>
+</html>

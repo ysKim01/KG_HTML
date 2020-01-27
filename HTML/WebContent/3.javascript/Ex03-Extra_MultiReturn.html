@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Multi Return</title>
+<script>
+	function test(){
+		return {
+			re1 : 'id',
+			re2 : 1
+		}
+	}
+</script>
+</head>
+<body>
+	<script>
+		let value = test();
+		console.log(value.re1);
+		console.log(value.re2);
+	</script>
+</body>
+</html>

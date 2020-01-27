@@ -2,19 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>event</title>
+<title>Event2</title>
 <style>
-	* { margin:0; padding:0;}
-	#outer{
+	* { margin:0; padding:0; }
+	#outer {
 		background : #ff0000;
 		padding : 20px;
 	}
-	#inner{
+	#inner {
 		background : #00ff00;
 		padding : 20px;
 	}
 </style>
-<script type="text/javascript">
+<script>
 	window.onload = function(){
 		var outer = document.getElementById('outer');
 		var inner = document.getElementById('inner');
@@ -23,14 +23,14 @@
 		}
 		inner.onclick = function(){
 			alert('자식 이벤트');
-			event.stopPropagation(); // 부모 이벤트가 안뜨게 해줌
+			event.stopPropagation(); //부모이벤트가 반응 안하게 해줌
 		}
 	}
 </script>
 </head>
 <body>
-	<div id="outer">
-		<p id="inner">클릭</p>
+	<div id='outer'>
+		<p id='inner'>클릭</p>
 	</div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Create Element</title>
+<style>
+	div {
+		position : fixed;
+		left : 100px;
+		top : 10px;
+		width : 200px;
+		height : 200px;
+		background : #718c00; 
+	}
+</style>
+<script type="text/javascript">
+	function createEle(){
+		var bt = document.getElementById('bt');
+		function popup(){
+			var div = document.createElement('div');
+			var p = document.createElement('p');
+			var txt = document.createTextNode('자바스크립트');
+			
+			p.appendChild(txt);
+			div.appendChild(p);
+			document.body.appendChild(div);
+		}
+		bt.onclick = popup;
+		
+		var bt2 = document.getElementById('bt2');
+		function popup2(){
+			var div = document.createElement('div');
+			var p = document.createElement('p');
+			var txt = document.createTextNode('자바스크립트2');
+			
+			p.appendChild(txt);
+			div.appendChild(p);
+			document.body.appendChild(div);
+		}
+		bt2.onclick = popup2;
+	}
+	addEventListener('load',createEle);
+</script>
+</head>
+<body>
+	<button id='bt'>요소생성</button>
+	<button id='bt2'>요소생성2</button>
+</body>
+</html>
