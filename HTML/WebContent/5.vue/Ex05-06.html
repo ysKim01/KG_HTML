@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue 컴포넌트5 스코프2</title>
+</head>
+<body>
+	<div id='app'>
+		<child-component v-bind:propsdata='message'></child-component>
+	</div>
+	<script src='https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
+	<script>
+		// 하위 컴포넌트에서 상위 컴포넌트로 값 전달
+		Vue.component('child-component',{
+			props:['propsdata'],
+			template:'<p>{{ propsdata }}</p>'
+		}); 
+		new Vue({
+			el:'#app',
+			data : {
+				message : 'Hello Vue!'
+			}
+		});
+	</script>
+</body>
+</html>

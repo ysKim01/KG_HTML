@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue template - directives</title>
+<!-- 
+	(v로 시작하는 모든 함수)
+	v-if 	: if문 - display:hidden
+	v-for	: for문
+	v-bind	: 속성 연결
+	v-show	: if문 이랑 비슷하다. - display:none
+	v-on	: 이벤트 처리
+	v-model : 폼에서 사용되는 속성
+ -->
+</head>
+<body>
+	<div id='app'>
+		<a v-if='flag'>do it vue.js</a>
+		<ul>
+			<li v-for='system in systems'>{{ system }}</li>
+		</ul>
+		<p v-show='flag'>do it vue.js</p>
+		<h5 v-bind='uid'>뷰 입문서</h5>
+		<button v-on:click='popupAlert'>경고창 버튼</button>
+	</div>
+	<script src='https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
+	<script>
+		new Vue({
+			el:'#app',
+			data:{
+				flag:true,
+				systems:['android','ios','windows','linux'],
+				uid:10
+			},
+			methods:{
+				popupAlert:function(){
+					return alert('경고 창 표시');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

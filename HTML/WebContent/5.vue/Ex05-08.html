@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vue 컴포넌트7 스코프4</title>
+</head>
+<body>
+	<div id='app'>
+		<child-component></child-component>
+	</div>
+	<script src='https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
+	<script>
+	 	var eventBus = new Vue();
+	 	Vue.component('child-component',{
+	 		template:'<div>하위 컴포넌트<button v-on:click="showLog">show</button></div>',
+	 		methods:{
+	 			showLog:function(){
+	 				eventBus.$emit('triggerEventBus',100);
+	 			}
+	 		}
+	 	});
+	 	
+	 	var app = new Vue({
+	 		el : '#app',
+	 		created:function(){
+	 			eventBus.$on('triggerEventBus',function(value){
+	 				console.log('Event Value : ' + value);
+	 			});
+	 		}
+	 	});
+	</script>
+</body>
+</html>

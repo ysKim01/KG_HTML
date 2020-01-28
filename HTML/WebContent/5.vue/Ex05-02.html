@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue 컴포넌트</title>
+</head>
+<body>
+	<div id='app'>
+		<button>컴포넌트 등록</button>
+		<my-component></my-component>
+	</div>
+	<script src='https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js'></script>
+	<script>
+		// 전역 컴포넌트
+		Vue.component('my-component', // 컴포넌트 테그 연결
+		{	// 내용 > 위의 연결된 테그와 내용 교체
+			template:'<div>전역 컴포넌트가 등록 되었습니다.</div>' 
+		});
+		new Vue({ // Vue Instance
+			el:'#app'
+		});
+	</script>
+</body>
+</html>
