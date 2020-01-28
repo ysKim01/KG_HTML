@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>innerHTML</title>
+<style>
+	div {
+		position : fixed;
+		left : 100px;
+		top : 10px;
+		width : 200px;
+		height : 200px;
+		background : #718c00; 
+	}
+	.m1 { background:#fff; }
+	p { color:gray; }
+</style>
+<script type="text/javascript">
+	function createEle(){
+		var content = document.getElementById('content');
+		content.innerHTML = '<p class="m1">자바스크립트</p>';
+		// 직접 테그 안 내용을 입력
+	}
+	addEventListener('load',createEle);
+</script>
+</head>
+<body>
+	<div id='content'></div>
+</body>
+</html>

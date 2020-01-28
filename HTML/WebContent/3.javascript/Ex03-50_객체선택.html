@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>객체선택 방법</title>
+<script>
+	window.onload = function(){
+		// name으로 접근에서 변수 저장
+		var frm1 = document.frm1;
+		var frm2 = document.frm2;
+		console.log(frm1.search.placeholder);
+		console.log(frm2.subject.placeholder);
+		console.log(frm2.credit.placeholder);
+		
+		// 전체 form 테그 인덱스로 접근
+		console.log(document.forms[0].elements[0].placeholder);
+		console.log(document.forms[1].elements[0].placeholder);
+		console.log(document.forms[1].elements[1].placeholder);
+		
+		// name으로 바로 접근
+		console.log(document.forms['frm1'].elements['search'].placeholder);
+		console.log(document.forms['frm2']['subject'].placeholder);
+	}
+</script>
+</head>
+<body>
+<form action="#" name="frm1">
+	<input type="search" name="search" placeholder="검색어 입력">
+	<input type="submit" value="확인">
+</form>
+<form action="#" name="frm2">
+	<input type="text" name="subject" placeholder="과목 입력">
+	<input type="password" name="credit" placeholder="학점 입력">
+	<input type="submit" value="확인">
+</form>
+</body>
+</html>
