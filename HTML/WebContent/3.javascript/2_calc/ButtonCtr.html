@@ -42,6 +42,35 @@
 			inputList[i].addEventListener('click',btnAction);
 		}
 	}
+	function btnAction(){
+		let result = document.getElementById('result');
+		
+		if(result.value=='0'){
+			result.value='';
+		}
+
+		if(this.value=='c'){
+			result.value='0';
+		}else if(this.value=='<'){ // backspace
+			result.value=result.value.substr(0,
+				result.value.length-1);
+			if(result.value==''){ // 다 지웠으면 0으로 초기화
+				result.value = '0';
+			}
+		}else if(this.value=='='){
+			result.value = eval(result.value); // 문자열을 코드로 인식 > 즉, 수식이 계산됨
+		}else if(isNaN(this.value)){	// +,-,*,/,%
+			var length = result.value.length;
+			// 계산기에 이미 수식이 있으면 지우고 입력된 식 삽입
+			if(isNaN(result.value.charAt(length-1))){
+				result.value = result.value.substr(0,length-1);
+			}
+			result.value += this.value;
+		}else{	// 숫자 
+			result.value += this.value;
+			console.log(result.value);
+		}
+	}
 </script>
 </head>
 <body onload='script:calc()'> <!-- window.onload 와 겸용 불가(window.onload가 먹힘) -->
